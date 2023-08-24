@@ -1,0 +1,44 @@
+// C++ code
+//
+#include <Adafruit_LiquidCrystal.h>
+int force=A0;
+
+int reading = 0;
+
+Adafruit_LiquidCrystal lcd(0);
+
+void setup()
+{
+  lcd.begin(16, 2);
+  pinMode(3,OUTPUT);
+  
+  lcd.setCursor(1,0);
+  lcd.print("reading");
+  
+
+  
+}
+
+void loop()
+{digitalWrite(3,1);
+  reading = analogRead(force);      
+   
+ 
+   int count=map(reading,0,1023,0,255);
+   lcd.setCursor(1,1);
+   lcd.print(reading);
+    delay(500);
+ 
+   
+   
+    1
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      ;}
